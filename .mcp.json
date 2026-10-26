@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "t3code-guide": {
+      "command": "node",
+      "args": [
+        "mcp-server.mjs"
+      ]
+    }
+  }
+}

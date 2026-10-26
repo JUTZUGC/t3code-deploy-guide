@@ -1,0 +1,106 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "t3code",
+    "nameCn": "T3 Code",
+    "repoName": "t3code-deploy-guide",
+    "oneLiner": "多端接管本机编码 Agent 的控制台",
+    "officialRepo": "https://github.com/pingdotgg/t3code",
+    "officialDocs": "https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md",
+    "stars": "30.4k",
+    "license": "MIT",
+    "highlights": [
+      "多客户端：桌面端 + 本地 Web + iOS / Android",
+      "多 Provider：Codex / Claude / Cursor / Grok / OpenCode / Antigravity",
+      "多账号：每个 provider 可挂多个账号",
+      "远程：手机或另一台机器连回本机",
+      "形态：CLI + 桌面端 + 后台服务"
+    ],
+    "mcpSupport": "T3 Code 通过 MCP 连接外部 Agent 与工具。本仓库的 MCP 只提供安装、provider 配置与常见坑。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-26",
+    "verification": [
+      [
+        "npm 包 t3 版本 0.1.2、engines.node >=20.11 已核对",
+        "已验证 2026-10-26"
+      ],
+      [
+        "Release v0.1.2 的 Windows / macOS / Linux 产物与 SHA256SUMS 已核对",
+        "已核对 2026-10-26"
+      ],
+      [
+        "安装脚本（sh / ps1）已通读，未执行安装（会写入用户目录）",
+        "已核对 2026-10-26"
+      ],
+      [
+        "MCP 服务握手与工具列表（initialize / tools/list）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "非目标宿主调用被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-26"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "curl -fsSL https://t3.codes/install.sh | sh",
+        "export PATH=\"$HOME/.local/bin:$PATH\"",
+        "command -v t3 >/dev/null 2>&1 || { echo \"安装后没找到 t3，请把 ~/.local/bin 加入 PATH\"; exit 1; }",
+        "t3 --version"
+      ],
+      "stepsPs": [
+        "irm https://t3.codes/install.ps1 | iex",
+        "$env:Path = \"$env:USERPROFILE\\.local\\bin;$env:Path\" ; t3 --version",
+        "Write-Host '安装完成：运行 t3 启动服务并打开本地 Web 应用'"
+      ],
+      "source": "https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md"
+    },
+    "pitfalls": [
+      "启动后没 provider：先在终端把 Codex / Claude / OpenCode 登录好，再回 Settings 启用",
+      "找不到 t3：把 `~/.local/bin`（Windows 是 `%USERPROFILE%\\.local\\bin`）加入 PATH",
+      "Windows 想后台常驻：`t3 service install` 不支持，改用桌面端或任务计划",
+      "手机连不上：确认手机与本机在同一网络，按官方远程访问文档配置",
+      "端口冲突：用 `--base-dir` 起独立实例，或先停掉旧的 `t3`",
+      "版本太旧：`t3 update` 更新到最新稳定版"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/t3code-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/t3code-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "T3 Code 部署",
+    "T3 Code 安装",
+    "手机 控制 Claude Code",
+    "Codex 远程 控制",
+    "AI Agent 控制台",
+    "T3 Code 中文",
+    "Claude Code 手机端",
+    "多端 Agent 管理",
+    "T3 Code MCP",
+    "t3code deploy guide"
+  ],
+  "topics": [
+    "ai-agents",
+    "coding-agent",
+    "remote",
+    "web-app",
+    "cli",
+    "typescript"
+  ]
+}
