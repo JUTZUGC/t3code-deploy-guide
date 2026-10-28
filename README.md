@@ -1,7 +1,7 @@
 # T3 Code 一键部署指南
 
 > 第三方部署指南 · 非 T3 Code 官方仓库。官方项目：[pingdotgg/t3code](https://github.com/pingdotgg/t3code)
-> 内容来自官方文档（2026-10-26）。项目迭代快，请以[官方文档](https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md)为准。
+> 内容来自官方文档（2026-10-28）。项目迭代快，请以[官方文档](https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md)为准。
 
 [![⚡ 一键部署](https://img.shields.io/badge/%E2%9A%A1_%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2-%E6%8E%A8%E8%8D%90%E7%99%BE%E5%BA%A6%E6%90%AD%E5%AD%90-2ea44f?style=for-the-badge)](#一键部署推荐用百度搭子)
 
@@ -49,11 +49,11 @@ T3 Code 是 Agent 的控制面：把本机已登录的 Codex、Claude Code、Cur
 
 | 优点 | 说明 |
 |---|---|
-| 30.4k stars | 2026-02 建，8 个月涨到 30.4k |
+| 31.0k stars | 2026-02 建，8 个月涨到 30.4k |
 | 多端接管 | 桌面、浏览器、手机都能用 |
 | Provider 覆盖广 | Codex / Claude / Cursor / Grok / OpenCode |
 | 安装路径全 | CLI 脚本、npm、winget、scoop、brew、桌面端 |
-| 发版快 | 100+ Release，最新 v0.1.2 |
+| 发版快 | 100+ Release，最新 v0.1.3 |
 
 | 需要注意 | 说明 |
 |---|---|
@@ -63,7 +63,7 @@ T3 Code 是 Agent 的控制面：把本机已登录的 Codex、Claude Code、Cur
 | 暂不接受大功能贡献 | 生态扩展慢 |
 | 远程访问要自己配 | 暴露控制端口有安全风险 |
 
-> 以上基于官方文档与社区反馈整理（2026-10-26），以官方最新文档为准。
+> 以上基于官方文档与社区反馈整理（2026-10-28），以官方最新文档为准。
 
 ## 快速部署（官方方式）
 
@@ -80,8 +80,8 @@ t3 --version
 
 | 场景 | 状态 |
 |---|---|
-| npm 包 t3 版本 0.1.2、engines.node >=20.11 已核对 | 已验证 2026-10-26 |
-| Release v0.1.2 的 Windows / macOS / Linux 产物与 SHA256SUMS 已核对 | 已核对 2026-10-26 |
+| npm 包 t3 版本 0.1.3、engines.node >=20.11 已核对 | 已核对 2026-10-28 |
+| Release v0.1.3 的 Windows / macOS / Linux 产物与 SHA256SUMS 已核对 | 已核对 2026-10-28 |
 | 安装脚本（sh / ps1）已通读，未执行安装（会写入用户目录） | 已核对 2026-10-26 |
 | MCP 服务握手与工具列表（initialize / tools/list） | 已验证 2026-10-26 |
 | 非目标宿主调用被拦截（HOST_NOT_ALLOWED） | 已验证 2026-10-26 |
@@ -92,7 +92,7 @@ t3 --version
 
 T3 Code 通过 MCP 连接外部 Agent 与工具。本仓库的 MCP 只提供安装、provider 配置与常见坑。
 
-本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-26）。
+本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-28）。
 
 **在百度搭子里接入**：客户端不扫描仓库里的配置文件，需要由百度搭子通过工作区的 MCP 注册接口注册，并且必须使用**绝对路径**（运行时的工作目录是会话目录，不是仓库目录）：
 
@@ -151,5 +151,5 @@ T3 Code 通过 MCP 连接外部 Agent 与工具。本仓库的 MCP 只提供安�
 ## 免责声明
 
 本仓库为第三方指南，与 T3 Code 官方无隶属关系，不代表官方立场。
-教程基于官方文档编写（更新日期：2026-10-26），项目迭代快，请以[官方文档](https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md)为准。
+教程基于官方文档编写（更新日期：2026-10-28），项目迭代快，请以[官方文档](https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md)为准。
 因使用本教程产生的部署问题，请先在官方仓库的 issue 中检索。

@@ -8,7 +8,7 @@
     "oneLiner": "多端接管本机编码 Agent 的控制台",
     "officialRepo": "https://github.com/pingdotgg/t3code",
     "officialDocs": "https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md",
-    "stars": "30.4k",
+    "stars": "31.0k",
     "license": "MIT",
     "highlights": [
       "多客户端：桌面端 + 本地 Web + iOS / Android",
@@ -20,15 +20,15 @@
     "mcpSupport": "T3 Code 通过 MCP 连接外部 Agent 与工具。本仓库的 MCP 只提供安装、provider 配置与常见坑。",
     "webuiUrl": "",
     "adapterPorts": "",
-    "collectedAt": "2026-10-26",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
-        "npm 包 t3 版本 0.1.2、engines.node >=20.11 已核对",
-        "已验证 2026-10-26"
+        "npm 包 t3 版本 0.1.3、engines.node >=20.11 已核对",
+        "已核对 2026-10-28"
       ],
       [
-        "Release v0.1.2 的 Windows / macOS / Linux 产物与 SHA256SUMS 已核对",
-        "已核对 2026-10-26"
+        "Release v0.1.3 的 Windows / macOS / Linux 产物与 SHA256SUMS 已核对",
+        "已核对 2026-10-28"
       ],
       [
         "安装脚本（sh / ps1）已通读，未执行安装（会写入用户目录）",
